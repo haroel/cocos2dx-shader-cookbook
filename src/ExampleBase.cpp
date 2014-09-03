@@ -51,6 +51,7 @@ bool ExampleBase::init()
     this->addChild(titleLabel);
 
     auto prev = Text::create("Prev", "Helvectica", 48);
+    prev->setColor(Color3B::BLACK);
     prev->setNormalizedPosition(Vec2(0.25, 0.1));
     prev->setTouchScaleChangeEnabled(true);
     prev->setTouchEnabled(true);
@@ -73,6 +74,7 @@ bool ExampleBase::init()
     this->addChild(prev);
 
     auto next = Text::create("Next", "Helvectica", 48);
+    next->setColor(Color3B::BLACK);
     next->setNormalizedPosition(Vec2(0.75, 0.1));
     next->setTouchScaleChangeEnabled(true);
     next->setTouchEnabled(true);
@@ -114,6 +116,13 @@ bool ExampleBase::init()
     _examples.push_back( { "E08_Outline", "Outline" } );
     _examples.push_back( { "E09_Static", "Static Noise" } );
     _examples.push_back( { "E10_Water", "Water (MultiTexture)", "res/Caustic.png", "res/BisectionNoise.png" });
+    _examples.push_back( { "E11_Diffusion", "Diffusion" } );
+    _examples.push_back( { "E12_ColorMatrix", "Color Matrix" } );
+    _examples.push_back( { "E13_MotionBlur", "Motion Blur" } );
+    _examples.push_back( { "E14_Flag", "Flag (Ripped)" } );
+    _examples.push_back( { "E15_SignedDistanceField", "Distance Field" } );
+    _examples.push_back( { "E16_MetaParticles", "Meta Particles" } );
+
     _currentIndex = 0;
     refreshShader();
 
